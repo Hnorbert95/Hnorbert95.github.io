@@ -16,7 +16,9 @@ const getInputValue = () => {
 }
 
 const checkInput = () => {
-    let value = getInputValue();
+    let ret = getInputValue();
+
+    let value = ret.toLowerCase();
     
     if(value == "" || value !== correctAnswer) {
         console.log("nem helyes");
