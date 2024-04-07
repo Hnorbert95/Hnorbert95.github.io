@@ -19,13 +19,15 @@ const checkInput = () => {
     let value = getInputValue();
     
     if(value == "" || value !== correctAnswer) {
-        console.log("nem helyes"); 
+        console.log("nem helyes");
+
+        document.querySelector('.error').classList.add("show");
     }
 
     else if(value == correctAnswer) {
         console.log("jó válasz");
 
-        
+        window.location.href = "/" + next + ".html";
     }
 }
 
